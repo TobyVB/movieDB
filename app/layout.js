@@ -17,9 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} mx-32`}>
+      <body className={`${montserrat.className}`}>
         <Nav />
-        {children}
+        <div className="mx-32">{children}</div>
         <Footer />
       </body>
     </html>

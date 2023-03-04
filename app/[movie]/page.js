@@ -11,6 +11,11 @@ export async function generateStaticParams() {
   }));
 }
 
+function replaceSpace(str) {
+  str.replace(" ", "+");
+  return str;
+}
+
 export default async function MovieDetail({ params }) {
   const { movie } = params;
   const imagePath = "https://image.tmdb.org/t/p/original";
@@ -37,6 +42,22 @@ export default async function MovieDetail({ params }) {
           priority
         />
         <p>{res.overview}</p>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <a
+            style={{ color: "red" }}
+            href={`https://www.youtube.com/results?search_query=${replaceSpace(
+              res.title
+            )}`}
+          >
+            Look for "{res.title}" on Youtube
+          </a>
+          <a
+            style={{ color: "red" }}
+            href={`https://www.google.com/webhp?q=${replaceSpace(res.title)}`}
+          >
+            Look for "{res.title}" on Google
+          </a>
+        </div>
       </div>
     </div>
   );
