@@ -10,8 +10,8 @@ export default async function Home() {
 
   return (
     <main>
-      <div>
-        <h1 className="text-4xl p-20">Hello next 13 🔥</h1>
+      <div style={{ margin: "5em 0" }}>
+        <h1 className="text-4xl py-20">Welcome to the movie database 🎥</h1>
       </div>
       <div className="grid gap-16 grid-cols-fluid">
         {res.results.map((movie) => (

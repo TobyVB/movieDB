@@ -25,7 +25,7 @@ export default async function MovieDetail({ params }) {
   );
   const res = await data.json();
   return (
-    <div>
+    <div style={{ margin: "10em 0" }}>
       <div>
         <h2 className="text-2xl">{res.title}</h2>
         <h2 className="text-lg">{res.release_date}</h2>

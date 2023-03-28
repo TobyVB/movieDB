@@ -6,19 +6,19 @@ export default function Nav() {
       style={{
         display: "flex",
         justifyContent: "space-between",
-        padding: ".5em",
+        padding: ".5em 8em",
         borderBottom: "1px solid white",
         background: "rgba(0,0,0,.85)",
       }}
     >
       <h1>
-        <Link href="/">VB movieDB</Link>
+        <Link href="/">movieDB</Link>
       </h1>
-      <ul style={{ display: "flex", gap: "2em" }}>
+      {/* <ul style={{ display: "flex", gap: "2em" }}>
         <li>
           <Link href="about">About</Link>
         </li>
-      </ul>
+      </ul> */}
     </div>
   );
 }
